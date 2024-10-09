@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f7;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 380px;
+    background-color: #1c1c1e;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: right;
+    font-size: 56px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    /* Ensure content does not overflow */
+    white-space: nowrap;
+    /* Keep numbers on a single line */
+    text-overflow: ellipsis;
+    /* Add ellipsis when text overflows */
+}
+
+#output {
+    display: block;
+    min-height: 70px;
+    font-weight: 300;
+    overflow: hidden;
+    /* Prevent content overflow */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background-color: #505050;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    background-color: #a5a5a5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.operator {
+    background-color: #ff9f0a;
+    color: white;
+}
+
+.operator:active {
+    background-color: #cc8500;
+}
+
+.clear {
+    background-color: #d4d4d2;
+    color: black;
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .btn {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .display {
+        font-size: 36px;
+    }
+}
